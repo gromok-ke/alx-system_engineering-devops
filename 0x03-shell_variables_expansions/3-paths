@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $PATH | wc -l
+IFS=':' read -ra PATH_DIRS <<< "$PATH" | DIR_COUNT=${#PATH_DIRS[@]}
